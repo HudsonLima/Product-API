@@ -5,17 +5,17 @@ using Product.Domain.Entities;
 
 namespace Product.Domain.Interfaces
 {
-   public interface IRepository<Entity> where Entity : BaseEntity
+   public interface IRepository<T> where T : BaseEntity
    {
-        void Insert(Entity obj);
+        void Insert(T obj);
 
-        void Update(Entity obj);
+        void Update(T obj);
 
         void Delete(int id);
 
-        Entity Select(int id);
+        T Select(int id);
 
-        IList<Entity> Select();
+        IList<T> Select();
    }
 }
 

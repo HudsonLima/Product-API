@@ -6,16 +6,16 @@ using Product.Domain.Entities;
 
 namespace Product.Domain.Interfaces
 {
-    public interface IService<Entity> where Entity : BaseEntity
+    public interface IService<T> where T : BaseEntity
     {
-        Entity Post<V>(Entity obj) where V : AbstractValidator<Entity>;
+        T Post<V>(Entity obj) where V : AbstractValidator<T>;
 
-        Entity Put<V>(Entity obj) where V : AbstractValidator<Entity>;
+        T Put<V>(T obj) where V : AbstractValidator<T>;
 
         void Delete(int id);
 
-        Entity Get(int id);
+        T Get(int id);
 
-        IList<Entity> Get();
+        IList<T> Get();
     }
 }

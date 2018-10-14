@@ -13,13 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Data", "4.1 Data", "{314F025F-65D6-4357-A3A3-CE6242DA85CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Application", "Product.Application\Product.Application.csproj", "{3784646D-23F2-4957-80B2-DE473781E4B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Application", "Product.Application\Product.Application.csproj", "{3784646D-23F2-4957-80B2-DE473781E4B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Domain", "Product.Domain\Product.Domain.csproj", "{F1E915C4-4586-4294-81F2-81604B89D9CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Domain", "Product.Domain\Product.Domain.csproj", "{F1E915C4-4586-4294-81F2-81604B89D9CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Service", "Product.Service\Product.Service.csproj", "{AD69801F-359B-4F36-9A81-BD8569B7FBA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Service", "Product.Service\Product.Service.csproj", "{AD69801F-359B-4F36-9A81-BD8569B7FBA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Infra.Data", "Product.Infra.Data\Product.Infra.Data.csproj", "{CF4F2041-B5E7-4DDC-946B-A65BFA0CE17A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Infra.Data", "Product.Infra.Data\Product.Infra.Data.csproj", "{CF4F2041-B5E7-4DDC-946B-A65BFA0CE17A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
