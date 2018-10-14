@@ -14,7 +14,7 @@ namespace ProductAPI.Application.Controllers
     [ApiController]
     public class BrandsController : ControllerBase
     {
-        private BaseService<Brand> service = new BaseService<Brand>();
+        private BrandService brandService = new BrandService();
 
         // GET: api/Brands
         [HttpGet]
@@ -22,7 +22,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(service.Get());
+                return new ObjectResult(brandService.Get());
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(service.Get(id));
+                return new ObjectResult(brandService.Get(id));
             }
             catch (ArgumentException ex)
             {
@@ -54,7 +54,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Put<BrandValidator>(item);
+                brandService.Put<BrandValidator>(item);
 
                 return new ObjectResult(item);
             }
@@ -74,7 +74,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Post<BrandValidator>(item);
+                brandService.Post<BrandValidator>(item);
 
                 return new ObjectResult(item.Id);
             }
@@ -94,7 +94,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Delete(id);
+                brandService.Delete(id);
 
                 return new NoContentResult();
             }
