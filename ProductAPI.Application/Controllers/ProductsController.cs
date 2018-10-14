@@ -14,7 +14,7 @@ namespace ProductAPI.Application.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private BaseService<Product> service = new BaseService<Product>();
+        private ProductService productService = new ProductService();
 
         // GET: api/Products
         [HttpGet]
@@ -22,7 +22,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(service.Get());
+                return new ObjectResult(productService.Get());
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(service.Get(id));
+                return new ObjectResult(productService.Get(id));
             }
             catch (ArgumentException ex)
             {
@@ -54,7 +54,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Put<ProductValidator>(item);
+                productService.Put<ProductValidator>(item);
 
                 return new ObjectResult(item);
             }
@@ -74,7 +74,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Post<ProductValidator>(item);
+                productService.Post<ProductValidator>(item);
 
                 return new ObjectResult(item.Id);
             }
@@ -95,7 +95,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                service.Delete(id);
+                productService.Delete(id);
 
                 return new NoContentResult();
             }
