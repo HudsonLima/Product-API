@@ -22,7 +22,7 @@ namespace ProductAPI.Service.Validators
                 .MaximumLength(50).WithMessage("Name must be no longer than 50 characters.")
                 .NotNull().WithMessage("Is necessary to inform the Name.");
 
-            RuleFor(c => c.Unity)
+            RuleFor(c => c.Unit)
                 .MaximumLength(50).WithMessage("Unity must be no longer than 50 characters.");
         }
     }

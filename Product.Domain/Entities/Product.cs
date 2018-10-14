@@ -8,7 +8,7 @@ namespace ProductAPI.Domain.Entities
     {
         public string Name { get; set; }
 
-        public string Unity { get; set; }
+        public string Unit { get; set; }
 
         public Int32 Quantity { get; set; }
 

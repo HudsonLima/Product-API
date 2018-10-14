@@ -20,8 +20,8 @@ namespace ProductAPI.Infra.Data.Mapping
                 .HasColumnName("Name")
                 .HasColumnType("varchar(50)");
 
-            builder.Property(c => c.Unity)
-                .HasColumnName("Unity");
+            builder.Property(c => c.Unit)
+                .HasColumnName("Unit");
 
 
             builder.Property(c => c.Quantity)
