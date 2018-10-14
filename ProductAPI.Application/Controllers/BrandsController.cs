@@ -12,11 +12,11 @@ namespace ProductAPI.Application.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class BrandsController : ControllerBase
     {
-        private BaseService<Product> service = new BaseService<Product>();
+        private BaseService<Brand> service = new BaseService<Brand>();
 
-        // GET: api/Products
+        // GET: api/Brands
         [HttpGet]
         public IActionResult Get()
         {
@@ -30,7 +30,7 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-        // GET: api/Products/5
+        // GET: api/Brands/1
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -47,14 +47,14 @@ namespace ProductAPI.Application.Controllers
                 return BadRequest(ex);
             }
         }
-       
-        // PUT: api/Products/5
+
+        // PUT: api/Brands/1
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Product item)
+        public IActionResult Put([FromBody] Brand item)
         {
             try
             {
-                service.Put<ProductValidator>(item);
+                service.Put<BrandValidator>(item);
 
                 return new ObjectResult(item);
             }
@@ -67,14 +67,14 @@ namespace ProductAPI.Application.Controllers
                 return BadRequest(ex);
             }
         }
-     
-       // POST: api/Products
-       // [HttpPost]
-        public IActionResult Post([FromBody] Product item)
+
+        // POST: api/Brand
+        // [HttpPost]
+        public IActionResult Post([FromBody] Brand item)
         {
             try
             {
-                service.Post<ProductValidator>(item);
+                service.Post<BrandValidator>(item);
 
                 return new ObjectResult(item.Id);
             }
@@ -88,8 +88,7 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-
-        // DELETE: api/Products/5
+        // DELETE: api/Brand/1
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -110,4 +109,3 @@ namespace ProductAPI.Application.Controllers
         }
     }
 }
- 
