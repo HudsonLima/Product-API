@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Product.Domain\ProductAPI.Domain.csproj" />
+    <ProjectReference Include="..\Product.Infra.Data\ProductAPI.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

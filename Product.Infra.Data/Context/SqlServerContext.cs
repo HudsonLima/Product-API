@@ -12,7 +12,9 @@ namespace ProductAPI.Infra.Data.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
+            { 
                 optionsBuilder.UseSqlServer("Data Source=HUDSONLIMA;Initial Catalog=productdb;Integrated Security=True");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
