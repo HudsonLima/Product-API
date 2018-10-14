@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using FluentValidation;
-using Product.Domain.Entities;
+using ProductAPI.Domain.Entities;
 
-namespace Product.Domain.Interfaces
+namespace ProductAPI.Domain.Interfaces
 {
     public interface IService<T> where T : BaseEntity
     {
-        T Post<V>(Entity obj) where V : AbstractValidator<T>;
+        T Post<V>(T obj) where V : AbstractValidator<T>;
 
         T Put<V>(T obj) where V : AbstractValidator<T>;
 

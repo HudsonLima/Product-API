@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Product.Domain.Entities;
+using ProductAPI.Domain.Entities;
 
-namespace Product.Domain.Interfaces
+namespace ProductAPI.Domain.Interfaces
 {
    public interface IRepository<T> where T : BaseEntity
    {

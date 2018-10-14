@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Product.Domain.Entities
+namespace ProductAPI.Domain.Entities
 {
     public abstract class BaseEntity
     {
