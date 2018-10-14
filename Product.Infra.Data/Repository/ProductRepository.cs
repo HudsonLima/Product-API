@@ -53,5 +53,10 @@ namespace ProductAPI.Infra.Data.Repository
             context.Entry(obj).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             context.SaveChanges();
         }
+
+        public int countActiveProducts()
+        {
+            return context.Product.Count(p => p.Active == true);
+        }
     }
 }

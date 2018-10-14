@@ -12,7 +12,7 @@ namespace ProductAPI.Service.Services
     public class ProductService : IProductService
     {
         private ProductRepository productRepository = new ProductRepository();
-        
+
         public void Delete(int id)
         {
             if (id == 0)
@@ -45,6 +45,11 @@ namespace ProductAPI.Service.Services
 
             productRepository.Update(obj);
             return obj;
+        }
+
+        public int Count()
+        {
+            return productRepository.countActiveProducts();
         }
 
         private void Validate(Product obj, AbstractValidator<Product> validator)

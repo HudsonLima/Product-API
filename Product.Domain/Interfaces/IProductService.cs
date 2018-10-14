@@ -18,5 +18,7 @@ namespace ProductAPI.Domain.Interfaces
         Product Get(int id);
 
         IQueryable<Object> Get();
+
+        int Count();
     }
 }

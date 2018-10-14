@@ -17,5 +17,7 @@ namespace ProductAPI.Domain.Interfaces
         Product Select(int id);
 
         IQueryable<Object> SelectProducts();
+
+        int countActiveProducts();
     }
 }
