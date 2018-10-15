@@ -5,6 +5,7 @@ using ProductAPI.Domain.Entities;
 using ProductAPI.Domain.Interfaces;
 using ProductAPI.Infra.Data.Context;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace ProductAPI.Infra.Data.Repository
 {
@@ -38,6 +39,29 @@ namespace ProductAPI.Infra.Data.Repository
         {
             context.Entry(obj).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             context.SaveChanges();
+        }
+
+        public IQueryable<Object> SelectBrands()
+        {
+            return from b in context.Set<Brand>()
+                   select new
+                   {
+                       id = b.Id,
+                       name = b.Name,
+                       products = context.Product.Where(x => x.Brand_Id == b.Id).Count()
+                  };
+
+         /*   XElement xml = new XElement("Brands",
+                from brand in context.Set<Brand>().AsEnumerable()
+                orderby brand.Id
+                select new XElement("brand",
+                    new XAttribute("id", brand.Id),
+                    new XElement("Name", brand.Name),
+                    new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count())
+                    )
+                );
+
+            return xml;*/
         }
     }
 }

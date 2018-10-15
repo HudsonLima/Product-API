@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using ProductAPI.Domain.Entities;
 
@@ -16,5 +17,7 @@ namespace ProductAPI.Domain.Interfaces
         Brand Select(int id);
 
         IList<Brand> Select();
+
+        IQueryable<Object> SelectBrands();
     }
 }

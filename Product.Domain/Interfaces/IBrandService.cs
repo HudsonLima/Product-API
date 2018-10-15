@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using FluentValidation;
 using ProductAPI.Domain.Entities;
@@ -17,5 +18,7 @@ namespace ProductAPI.Domain.Interfaces
         Brand Get(int id);
 
         IList<Brand> Get();
+
+        IQueryable<Object> GetBrandsAndProductCount();
     }
 }

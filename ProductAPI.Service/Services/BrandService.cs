@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using FluentValidation;
 using ProductAPI.Domain.Entities;
@@ -47,6 +48,8 @@ namespace ProductAPI.Service.Services
             return obj;
         }
 
+        public IQueryable<Object> GetBrandsAndProductCount() => brandRepository.SelectBrands();
+
         private void Validate(Brand obj, AbstractValidator<Brand> validator)
         {
             if (obj == null)
@@ -54,5 +57,6 @@ namespace ProductAPI.Service.Services
 
             validator.ValidateAndThrow(obj);
         }
+
     }
 }

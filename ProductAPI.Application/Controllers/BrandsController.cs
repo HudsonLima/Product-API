@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Web.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductAPI.Domain.Entities;
 using ProductAPI.Service.Services;
 using ProductAPI.Service.Validators;
+using System.Xml;
+using System.Xml.Linq;
+using System.Runtime.Serialization;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using System.Net.Http.Headers;
 
 namespace ProductAPI.Application.Controllers
 {
@@ -19,6 +28,7 @@ namespace ProductAPI.Application.Controllers
         // GET: api/Brands
         [HttpGet]
         public IActionResult Get()
+
         {
             try
             {
@@ -107,5 +117,46 @@ namespace ProductAPI.Application.Controllers
                 return BadRequest(ex);
             }
         }
+
+        [HttpGet("count")]
+        [Produces("application/xml")]
+        public IActionResult brandsCount(int id)
+        {
+            try
+            {
+                IQueryable<Object> obj;
+                obj = brandService.GetBrandsAndProductCount();
+               // ObjectResult objResult = new ObjectResult(obj);
+              //  objResult.ContentTypes.Add("application/json");
+
+                return new ObjectResult(obj);
+
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+      /*  [HttpGet("count2")]
+        [Produces("application/xml")]
+        public ContentResult Get2()
+        {
+            IQueryable<Object> obj;
+            obj = brandService.GetBrandsAndProductCount();
+
+            return new ContentResult
+            {
+                ContentType = "application/xml",
+                Content = obj.ToList(),
+                StatusCode = 200
+            };
+        }
+
+    */
     }
 }
