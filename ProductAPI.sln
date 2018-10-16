@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Domain", "Produc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Infra.Data", "Product.Infra.Data\ProductAPI.Infra.Data.csproj", "{CF4F2041-B5E7-4DDC-946B-A65BFA0CE17A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.Application", "ProductAPI.Application\ProductAPI.Application.csproj", "{3F4F67D9-E6D2-4C8A-B3DE-50363B10DD11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Application", "ProductAPI.Application\ProductAPI.Application.csproj", "{3F4F67D9-E6D2-4C8A-B3DE-50363B10DD11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.Service", "ProductAPI.Service\ProductAPI.Service.csproj", "{412EBA50-FE82-40CE-98F1-6B464E61D2DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Service", "ProductAPI.Service\ProductAPI.Service.csproj", "{412EBA50-FE82-40CE-98F1-6B464E61D2DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.Tests", "ProductAPI.Tests\ProductAPI.Tests.csproj", "{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{412EBA50-FE82-40CE-98F1-6B464E61D2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{412EBA50-FE82-40CE-98F1-6B464E61D2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{412EBA50-FE82-40CE-98F1-6B464E61D2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
