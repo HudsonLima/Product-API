@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using ProductAPI.Domain.Entities;
 
 namespace ProductAPI.Infra.Data.Mapping
 {
@@ -22,7 +18,6 @@ namespace ProductAPI.Infra.Data.Mapping
 
             builder.Property(c => c.Unit)
                 .HasColumnName("Unit");
-
 
             builder.Property(c => c.Quantity)
                 .HasColumnName("Quantity");
