@@ -10,6 +10,7 @@ using System.Linq;
 using System;
 using FluentValidation;
 using ProductAPI.Service.Validators;
+using System.IO;
 
 namespace ProductAPI.Tests
 {
@@ -93,7 +94,7 @@ namespace ProductAPI.Tests
 
         
         [TestMethod]
-        public void PostProduct_ShouldReturnOk()
+        public void PostProduct_ShouldReturnId()
         {
             //Arrange
             Product testProduct = new Product();
@@ -111,7 +112,25 @@ namespace ProductAPI.Tests
             Assert.IsInstanceOfType(result, typeof(OkObjectResult));
             Assert.AreEqual(1, result.Value);
         }
-        
+
+        [TestMethod]
+        public void GetCountProduct_ShouldReturnFile()
+        {
+            //Arrange
+            Product testProduct = new Product();
+            testProduct = GetTestProduct();
+            var mock = new Mock<IProductService>();
+            var controller = new ProductsController(mock.Object);
+
+            //Act
+            mock.Setup(p => p.Count());
+            var result = controller.productCount() as FileContentResult;
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.FileDownloadName);
+            Assert.IsInstanceOfType(result, typeof(FileContentResult));
+        }
+
         private System.Collections.Generic.List<Product> GetTestProducts()
             {
                 var testProducts = new List<Product>();
