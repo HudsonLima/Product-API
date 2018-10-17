@@ -39,7 +39,6 @@ namespace ProductAPI.Application
             services.AddSingleton<IBrandService, BrandService>();
             services.AddTransient<ProductService, ProductService>();
             services.AddTransient<BrandService, BrandService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

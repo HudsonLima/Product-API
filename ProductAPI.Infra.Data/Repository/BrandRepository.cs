@@ -43,25 +43,37 @@ namespace ProductAPI.Infra.Data.Repository
 
         public IQueryable<Object> SelectBrands()
         {
-            return from b in context.Set<Brand>()
-                   select new
-                   {
-                       id = b.Id,
-                       name = b.Name,
-                       products = context.Product.Where(x => x.Brand_Id == b.Id).Count()
-                  };
+                return from b in context.Set<Brand>()
+                       select new
+                       {
+                           id = b.Id,
+                           name = b.Name,
+                           products = context.Product.Where(x => x.Brand_Id == b.Id).Count()
+                      }; 
 
-         /*   XElement xml = new XElement("Brands",
-                from brand in context.Set<Brand>().AsEnumerable()
-                orderby brand.Id
-                select new XElement("brand",
-                    new XAttribute("id", brand.Id),
-                    new XElement("Name", brand.Name),
-                    new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count())
-                    )
-                );
+            /*
+            XDocument xml = new XDocument(
+                new XElement("brands",
+                    from brand in context.Brand
+                    orderby brand.Id
+                    select new XElement("brand",
+                        new XAttribute("Id", brand.Id),
+                        new XElement("Name", brand.Name),
+                        new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count()))));
+           
+                        xml.Save(yourStream);
+                        */
+            /*   XElement xml = new XElement("Brands",
+                   from brand in context.Set<Brand>().AsEnumerable()
+                   orderby brand.Id
+                   select new XElement("brand",
+                       new XAttribute("id", brand.Id),
+                       new XElement("Name", brand.Name),
+                       new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count())
+                       )
+                   );
 
-            return xml;*/
+               return xml;*/
         }
     }
 }

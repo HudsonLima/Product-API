@@ -17,6 +17,7 @@ using System.Runtime.Serialization;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using System.Net.Http.Headers;
 using ProductAPI.Domain.Interfaces;
+using System.Xml.Serialization;
 
 namespace ProductAPI.Application.Controllers
 {
@@ -115,16 +116,14 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-        [HttpGet("count")]
-        [Produces("application/xml")]
+        [HttpGet("count"), Produces("application/xml")]
         public IActionResult brandsCount(int id)
         {
             try
             {
                 IQueryable<Object> obj;
                 obj = _brandService.GetBrandsAndProductCount();
-               // ObjectResult objResult = new ObjectResult(obj);
-              //  objResult.ContentTypes.Add("application/json");
+
 
                 return new ObjectResult(obj);
 
@@ -139,21 +138,54 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-      /*  [HttpGet("count2")]
-        [Produces("application/xml")]
+        //[HttpGet("count2")]
+        [HttpGet("count2"), Produces("application/xml")]
         public ContentResult Get2()
         {
             IQueryable<Object> obj;
-            obj = brandService.GetBrandsAndProductCount();
+            obj = _brandService.GetBrandsAndProductCount();
+
+            var xmlResult = "";
 
             return new ContentResult
             {
                 ContentType = "application/xml",
-                Content = obj.ToList(),
+                Content = xmlResult,
                 StatusCode = 200
             };
         }
+        
+        public static string CreateXml<T>(IQueryable<T> thisQueryable)
+        {
+            var thisList = thisQueryable.ToList();
+            var xmlResult = "";
+            using (var stringWriter = new StringWriter())
+            {
+                using (var xmlWriter = new XmlTextWriter(stringWriter))
+                {
+                    var serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<T>));
+                    serializer.Serialize(xmlWriter, thisList);
+                }
+                xmlResult = stringWriter.ToString();
+            }
+            return xmlResult;
+        }
 
-    */
+
+        public static string Serialize<T>(T dataToSerialize)
+        {
+            try
+            {
+                var stringwriter = new System.IO.StringWriter();
+                var serializer = new XmlSerializer(typeof(T));
+                serializer.Serialize(stringwriter, dataToSerialize);
+                return stringwriter.ToString();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }
