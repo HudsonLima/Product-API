@@ -36,7 +36,7 @@ namespace ProductAPI.Tests
             Assert.IsNotNull(result);
             Assert.AreEqual(200, result.StatusCode);
         }
-             
+
 
         [TestMethod]
         public void GetProduct_ShouldReturnCorrectProduct()
@@ -71,6 +71,7 @@ namespace ProductAPI.Tests
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(OkResult));
+            Assert.AreEqual(200, result.StatusCode);
         }
 
         [TestMethod]
@@ -86,13 +87,13 @@ namespace ProductAPI.Tests
             mock.Setup(p => p.Put<ProductValidator>(GetTestProduct())).Returns(testProduct);
             var result = controller.Put(GetTestProduct()) as OkObjectResult;
 
-            // Assert
+            //Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(200, result.StatusCode);
             Assert.IsInstanceOfType(result, typeof(OkObjectResult));
         }
 
-        
+
         [TestMethod]
         public void PostProduct_ShouldReturnId()
         {
@@ -105,7 +106,7 @@ namespace ProductAPI.Tests
             //Act
             mock.Setup(p => p.Post<ProductValidator>(GetTestProduct())).Returns(testProduct);
             var result = controller.Post(GetTestProduct()) as OkObjectResult;
-            
+
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(200, result.StatusCode);
@@ -132,31 +133,31 @@ namespace ProductAPI.Tests
         }
 
         private System.Collections.Generic.List<Product> GetTestProducts()
+        {
+            var testProducts = new List<Product>();
+            testProducts.Add(new Product { Id = 1, Name = "Demo1", Unit = "Unit1", Quantity = 1, Price = 1, Active = true, Brand_Id = 1 });
+            testProducts.Add(new Product { Id = 2, Name = "Demo2", Unit = "Unit2", Quantity = 2, Price = 2, Active = true, Brand_Id = 1 });
+            testProducts.Add(new Product { Id = 3, Name = "Demo3", Unit = "Unit3", Quantity = 3, Price = 3, Active = true, Brand_Id = 1 });
+            testProducts.Add(new Product { Id = 4, Name = "Demo4", Unit = "Unit4", Quantity = 4, Price = 4, Active = true, Brand_Id = 1 });
+
+            return testProducts;
+        }
+
+        private Product GetTestProduct()
+        {
+            Product product = new Product
             {
-                var testProducts = new List<Product>();
-                testProducts.Add(new Product { Id = 1, Name = "Demo1", Unit = "Unit1", Quantity = 1, Price = 1, Active = true, Brand_Id = 1 });
-                testProducts.Add(new Product { Id = 2, Name = "Demo2", Unit = "Unit2", Quantity = 2, Price = 2, Active = true, Brand_Id = 1 });
-                testProducts.Add(new Product { Id = 3, Name = "Demo3", Unit = "Unit3", Quantity = 3, Price = 3, Active = true, Brand_Id = 1 });
-                testProducts.Add(new Product { Id = 4, Name = "Demo4", Unit = "Unit4", Quantity = 4, Price = 4, Active = true, Brand_Id = 1 });
+                Id = 1,
+                Name = "Demo1",
+                Unit = "Unit1",
+                Quantity = 1,
+                Price = 1,
+                Active = true,
+                Brand_Id = 1
+            };
 
-                return testProducts;
-            }
+            return product;
+        }
 
-            private Product GetTestProduct()
-            {
-                Product product = new Product
-                {
-                    Id = 1,
-                    Name = "Demo1",
-                    Unit = "Unit1",
-                    Quantity = 1,
-                    Price = 1,
-                    Active = true,
-                    Brand_Id = 1
-                };
-
-                return product;
-            }
-            
-}
+    }
 }

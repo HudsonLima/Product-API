@@ -36,6 +36,7 @@ namespace ProductAPI.Application
             });
 
             services.AddSingleton<IProductService, ProductService>();
+            services.AddSingleton<IBrandService, BrandService>();
             services.AddTransient<ProductService, ProductService>();
             services.AddTransient<BrandService, BrandService>();
 

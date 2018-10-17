@@ -34,11 +34,11 @@ namespace ProductAPI.Application.Controllers
         // GET: api/Brands
         [HttpGet]
         public IActionResult Get()
-
         {
             try
             {
-                return new ObjectResult(_brandService.Get());
+                var brands = _brandService.Get();
+                return Ok(brands);
             }
             catch (Exception ex)
             {
@@ -50,29 +50,22 @@ namespace ProductAPI.Application.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            try
+            Brand brand = _brandService.Get(id);
+            if (brand == null)
             {
-                return new ObjectResult(_brandService.Get(id));
+                return NotFound();
             }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            return Ok(brand);
         }
 
         // PUT: api/Brands/1
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Brand item)
+        public IActionResult Put([FromBody] Brand brand)
         {
             try
             {
-                _brandService.Put<BrandValidator>(item);
-
-                return new ObjectResult(item);
+                _brandService.Put<BrandValidator>(brand);
+                return Ok(brand);
             }
             catch (ArgumentNullException ex)
             {
@@ -86,13 +79,12 @@ namespace ProductAPI.Application.Controllers
 
         // POST: api/Brand
         // [HttpPost]
-        public IActionResult Post([FromBody] Brand item)
+        public IActionResult Post([FromBody] Brand brand)
         {
             try
             {
-                _brandService.Post<BrandValidator>(item);
-
-                return new ObjectResult(item.Id);
+                _brandService.Post<BrandValidator>(brand);
+                return Ok(brand.Id);
             }
             catch (ArgumentNullException ex)
             {
@@ -111,8 +103,7 @@ namespace ProductAPI.Application.Controllers
             try
             {
                 _brandService.Delete(id);
-
-                return new NoContentResult();
+                return Ok();
             }
             catch (ArgumentException ex)
             {
