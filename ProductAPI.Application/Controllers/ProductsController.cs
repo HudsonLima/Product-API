@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductAPI.Domain.Entities;
-using ProductAPI.Service.Services;
+using ProductAPI.Domain.Interfaces;
 using ProductAPI.Service.Validators;
 
 namespace ProductAPI.Application.Controllers
@@ -15,15 +12,21 @@ namespace ProductAPI.Application.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private ProductService productService = new ProductService();
+        private readonly IProductService _productService;
 
+        public ProductsController(IProductService productService)
+        {
+            _productService = productService;
+        }
+        
         // GET: api/Products
         [HttpGet]
         public IActionResult Get()
         {
             try
             {
-                return new ObjectResult(productService.Get());
+                var products = _productService.Get();
+                return Ok(products);
             }
             catch (Exception ex)
             {
@@ -35,29 +38,22 @@ namespace ProductAPI.Application.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            try
+            Product product = _productService.Get(id);
+            if (product == null)
             {
-                return new ObjectResult(productService.Get(id));
+                return NotFound();
             }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            return Ok(product);
         }
 
         // PUT: api/Products/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Product item)
+        public IActionResult Put([FromBody] Product product)
         {
             try
             {
-                productService.Put<ProductValidator>(item);
-
-                return new ObjectResult(item);
+                _productService.Put<ProductValidator>(product);
+                return Ok(product);
             }
             catch (ArgumentNullException ex)
             {
@@ -71,13 +67,12 @@ namespace ProductAPI.Application.Controllers
 
         // POST: api/Products
         // [HttpPost]
-        public IActionResult Post([FromBody] Product item)
+        public IActionResult Post([FromBody] Product product)
         {
             try
             {
-                productService.Post<ProductValidator>(item);
-
-                return new ObjectResult(item.Id);
+                _productService.Post<ProductValidator>(product);
+                return  Ok(product.Id);
             }
             catch (ArgumentNullException ex)
             {
@@ -96,9 +91,8 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                productService.Delete(id);
-
-                return new NoContentResult();
+                _productService.Delete(id);
+                return Ok();
             }
             catch (ArgumentException ex)
             {
@@ -119,7 +113,7 @@ namespace ProductAPI.Application.Controllers
                 TextWriter tw = new StreamWriter(memoryStream);
 
                 tw.WriteLine("Product Count");
-                tw.WriteLine(productService.Count());
+                tw.WriteLine(_productService.Count());
                 tw.Flush();
                 tw.Close();
 

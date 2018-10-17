@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
+using ProductAPI.Domain.Interfaces;
+using ProductAPI.Service.Services;
 
 namespace ProductAPI.Application
 {
@@ -32,6 +34,10 @@ namespace ProductAPI.Application
             {
                 options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
             });
+
+            services.AddSingleton<IProductService, ProductService>();
+            services.AddTransient<ProductService, ProductService>();
+            services.AddTransient<BrandService, BrandService>();
 
         }
 

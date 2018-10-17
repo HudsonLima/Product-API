@@ -16,6 +16,7 @@ using System.Xml.Linq;
 using System.Runtime.Serialization;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using System.Net.Http.Headers;
+using ProductAPI.Domain.Interfaces;
 
 namespace ProductAPI.Application.Controllers
 {
@@ -23,7 +24,12 @@ namespace ProductAPI.Application.Controllers
     [ApiController]
     public class BrandsController : ControllerBase
     {
-        private BrandService brandService = new BrandService();
+        private readonly IBrandService _brandService;
+
+        public BrandsController(IBrandService brandService)
+        {
+            _brandService = brandService;
+        }
 
         // GET: api/Brands
         [HttpGet]
@@ -32,7 +38,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(brandService.Get());
+                return new ObjectResult(_brandService.Get());
             }
             catch (Exception ex)
             {
@@ -46,7 +52,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                return new ObjectResult(brandService.Get(id));
+                return new ObjectResult(_brandService.Get(id));
             }
             catch (ArgumentException ex)
             {
@@ -64,7 +70,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                brandService.Put<BrandValidator>(item);
+                _brandService.Put<BrandValidator>(item);
 
                 return new ObjectResult(item);
             }
@@ -84,7 +90,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                brandService.Post<BrandValidator>(item);
+                _brandService.Post<BrandValidator>(item);
 
                 return new ObjectResult(item.Id);
             }
@@ -104,7 +110,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                brandService.Delete(id);
+                _brandService.Delete(id);
 
                 return new NoContentResult();
             }
@@ -125,7 +131,7 @@ namespace ProductAPI.Application.Controllers
             try
             {
                 IQueryable<Object> obj;
-                obj = brandService.GetBrandsAndProductCount();
+                obj = _brandService.GetBrandsAndProductCount();
                // ObjectResult objResult = new ObjectResult(obj);
               //  objResult.ContentTypes.Add("application/json");
 
