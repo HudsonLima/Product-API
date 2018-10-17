@@ -17,7 +17,6 @@ namespace ProductAPI.Tests
     [TestClass]
     public class ProductsControllerTests
     {
-
         [TestMethod]
         public void GetAllProducts_ShouldReturnAllProducts()
         {

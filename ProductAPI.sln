@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Service", "Produ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Tests", "ProductAPI.Tests\ProductAPI.Tests.csproj", "{B0969EE2-7CED-4DDE-8B29-0467C0784F1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.Domain", "ProductAPI.Domain\ProductAPI.Domain.csproj", "{AF376569-3D33-45CC-8957-57DB42070720}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Domain", "ProductAPI.Domain\ProductAPI.Domain.csproj", "{AF376569-3D33-45CC-8957-57DB42070720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.Infra.Data", "ProductAPI.Infra.Data\ProductAPI.Infra.Data.csproj", "{02754441-2619-47EF-A82B-383963A9201A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Infra.Data", "ProductAPI.Infra.Data\ProductAPI.Infra.Data.csproj", "{02754441-2619-47EF-A82B-383963A9201A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
