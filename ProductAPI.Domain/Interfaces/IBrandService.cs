@@ -19,6 +19,6 @@ namespace ProductAPI.Domain.Interfaces
 
         IList<Brand> Get();
 
-        IQueryable<Object> GetBrandsAndProductCount();
+        List<BrandProduct> GetBrandsAndTotalProducts();
     }
 }

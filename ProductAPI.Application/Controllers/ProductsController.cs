@@ -104,20 +104,16 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
+        // GET: api/Products/5
         [HttpGet("count")]
-        public IActionResult productCount()
+        public IActionResult GetTotalProducts()
         {
             try
             { 
-                MemoryStream memoryStream = new MemoryStream();
-                TextWriter tw = new StreamWriter(memoryStream);
-
-                tw.WriteLine("Product Count");
-                tw.WriteLine(_productService.Count());
-                tw.Flush();
-                tw.Close();
-
-                return File(memoryStream.GetBuffer(), "text/plain", "productCount.txt");
+                int totalProducts = _productService.Count();
+                MemoryStream memoryStream = Product.GenerateTxt(totalProducts);
+                              
+                return File(memoryStream.GetBuffer(), "text/plain", "totalProducts.txt");
             }
             catch (ArgumentException ex)
             {

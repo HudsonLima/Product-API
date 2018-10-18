@@ -48,7 +48,7 @@ namespace ProductAPI.Service.Services
             return obj;
         }
 
-        public IQueryable<Object> GetBrandsAndProductCount() => brandRepository.SelectBrands();
+        public List<BrandProduct> GetBrandsAndTotalProducts() => brandRepository.SelectBrands();
 
         private void Validate(Brand obj, AbstractValidator<Brand> validator)
         {

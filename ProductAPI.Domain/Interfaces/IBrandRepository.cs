@@ -18,6 +18,6 @@ namespace ProductAPI.Domain.Interfaces
 
         IList<Brand> Select();
 
-        IQueryable<Object> SelectBrands();
+        List<BrandProduct> SelectBrands();
     }
 }

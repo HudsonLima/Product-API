@@ -11,7 +11,7 @@ namespace ProductAPI.Tests
     public class BrandsServiceTest
     {
         [TestMethod]
-        public void CallBrandsService() //object data, string path
+        public void CallBrandsService() 
         {
             string path = Configuration.Default.Resource
                 + "/api/brands";

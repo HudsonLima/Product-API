@@ -5,10 +5,7 @@ using ProductAPI.Application.Controllers;
 using ProductAPI.Domain.Entities;
 using ProductAPI.Domain.Interfaces;
 using ProductAPI.Service.Validators;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ProductAPI.Tests
 {
@@ -16,12 +13,10 @@ namespace ProductAPI.Tests
     public class BrandsControllerTests
     {
         [TestMethod]
-        public void GetAllBrands_ShouldReturnAllProducts()
+        public void GetAllBrands_ShouldReturnAllBrands()
         {
             //Arrange
             var testBrands = GetTestBrands();
-            List<Brand> brands = new List<Brand>();
-            brands = GetTestBrands();
             var mock = new Mock<IBrandService>();
 
             //Act
@@ -30,6 +25,22 @@ namespace ProductAPI.Tests
             var result = controller.Get() as OkObjectResult;
 
             //Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(200, result.StatusCode);
+        }
+
+        [TestMethod]
+        public void GetAllBrandsAndTotalProducts_ShouldReturnAllBrands()
+        {
+            //Arrange
+            var mock = new Mock<IBrandService>();
+            var controller = new BrandsController(mock.Object);
+
+            //Act
+            mock.Setup(p => p.GetBrandsAndTotalProducts());
+            var result = controller.GetBrandsAndTotalProducts() as OkObjectResult;
+
+            // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(200, result.StatusCode);
         }
@@ -56,8 +67,6 @@ namespace ProductAPI.Tests
         public void DeleteBrand_ShouldReturnOk()
         {
             //Arrange
-            Brand testBrand = new Brand();
-            testBrand = GetTestBrand();
             var mock = new Mock<IBrandService>();
             var controller = new BrandsController(mock.Object);
 
@@ -71,7 +80,7 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void PutProduct_ShouldReturnOk()
+        public void PutBrand_ShouldReturnOk()
         {
             //Arrange
             Brand testBrand = new Brand();
@@ -109,14 +118,14 @@ namespace ProductAPI.Tests
             Assert.AreEqual(1, result.Value);
         }
 
-
+                     
         private System.Collections.Generic.List<Brand> GetTestBrands()
         {
             var testBrands = new List<Brand>();
-            testBrands.Add(new Brand { Id = 1, Name = "Marca1"});
-            testBrands.Add(new Brand { Id = 2, Name = "Marca2" });
-            testBrands.Add(new Brand { Id = 3, Name = "Marca3" });
-            testBrands.Add(new Brand { Id = 4, Name = "Marca4" });
+            testBrands.Add(new Brand { Id = 1, Name = "Brand1"});
+            testBrands.Add(new Brand { Id = 2, Name = "Brand2" });
+            testBrands.Add(new Brand { Id = 3, Name = "Brand3" });
+            testBrands.Add(new Brand { Id = 4, Name = "Brand4" });
 
             return testBrands;
         }

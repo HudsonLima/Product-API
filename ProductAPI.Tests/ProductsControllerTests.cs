@@ -22,12 +22,10 @@ namespace ProductAPI.Tests
         {
             //Arrange
             var testProducts = GetTestProducts();
-            List<Product> products = new List<Product>();
-            products = GetTestProducts();
             var mock = new Mock<IProductService>();
 
             //Act
-            mock.Setup(p => p.Get()).Returns(products.AsQueryable());
+            mock.Setup(p => p.Get()).Returns(testProducts.AsQueryable());
             var controller = new ProductsController(mock.Object);
             var result = controller.Get() as OkObjectResult;
 
@@ -59,8 +57,6 @@ namespace ProductAPI.Tests
         public void DeleteProduct_ShouldReturnOk()
         {
             //Arrange
-            Product testProduct = new Product();
-            testProduct = GetTestProduct();
             var mock = new Mock<IProductService>();
             var controller = new ProductsController(mock.Object);
 
@@ -117,14 +113,13 @@ namespace ProductAPI.Tests
         public void GetCountProduct_ShouldReturnFile()
         {
             //Arrange
-            Product testProduct = new Product();
-            testProduct = GetTestProduct();
             var mock = new Mock<IProductService>();
             var controller = new ProductsController(mock.Object);
 
             //Act
             mock.Setup(p => p.Count());
-            var result = controller.productCount() as FileContentResult;
+            var result = controller.GetTotalProducts() as FileContentResult;
+
             // Assert
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.FileDownloadName);

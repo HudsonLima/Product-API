@@ -18,8 +18,4 @@
     <ProjectReference Include="..\ProductAPI.Application\ProductAPI.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-  </ItemGroup>
-
 </Project>

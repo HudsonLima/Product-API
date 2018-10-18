@@ -29,11 +29,18 @@ namespace ProductAPI.Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvc(options =>
+
+            services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvcCore().AddJsonFormatters();
+
+            services.AddMvcCore(options =>
             {
+                options.RespectBrowserAcceptHeader = true;
+                options.ReturnHttpNotAcceptable = true;
                 options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
             });
+
+            services.AddMvcCore().AddXmlSerializerFormatters();
 
             services.AddSingleton<IProductService, ProductService>();
             services.AddSingleton<IBrandService, BrandService>();

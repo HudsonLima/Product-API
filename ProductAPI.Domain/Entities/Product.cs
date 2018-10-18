@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace ProductAPI.Domain.Entities
 {
@@ -17,6 +16,19 @@ namespace ProductAPI.Domain.Entities
         public Boolean Active { get; set; }
 
         public Int32 Brand_Id { get; set; }
+
+        public static MemoryStream GenerateTxt(int number)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            TextWriter tw = new StreamWriter(memoryStream);
+
+            tw.WriteLine("Total Products");
+            tw.WriteLine(number);
+            tw.Flush();
+            tw.Close();
+
+            return memoryStream;
+        }
 
     }
 

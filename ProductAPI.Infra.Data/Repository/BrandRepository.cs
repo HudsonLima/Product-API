@@ -41,39 +41,16 @@ namespace ProductAPI.Infra.Data.Repository
             context.SaveChanges();
         }
 
-        public IQueryable<Object> SelectBrands()
+        public List<BrandProduct> SelectBrands()
         {
-                return from b in context.Set<Brand>()
-                       select new
-                       {
-                           id = b.Id,
-                           name = b.Name,
-                           products = context.Product.Where(x => x.Brand_Id == b.Id).Count()
-                      }; 
+            return (from b in context.Set<Brand>()
+                    select new BrandProduct
+                    {
+                        Id = b.Id,
+                        Name = b.Name,
+                        TotalProducts = context.Product.Where(x => x.Brand_Id == b.Id).Count()
+                    }).ToList() ; 
 
-            /*
-            XDocument xml = new XDocument(
-                new XElement("brands",
-                    from brand in context.Brand
-                    orderby brand.Id
-                    select new XElement("brand",
-                        new XAttribute("Id", brand.Id),
-                        new XElement("Name", brand.Name),
-                        new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count()))));
-           
-                        xml.Save(yourStream);
-                        */
-            /*   XElement xml = new XElement("Brands",
-                   from brand in context.Set<Brand>().AsEnumerable()
-                   orderby brand.Id
-                   select new XElement("brand",
-                       new XAttribute("id", brand.Id),
-                       new XElement("Name", brand.Name),
-                       new XElement("Products", context.Product.Where(x => x.Brand_Id == brand.Id).Count())
-                       )
-                   );
-
-               return xml;*/
         }
     }
 }
