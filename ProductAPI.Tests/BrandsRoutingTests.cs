@@ -8,7 +8,7 @@ using System.Text;
 namespace ProductAPI.Tests
 {
     [TestClass]
-    public class BrandsServiceTest
+    public class BrandsRoutingTests
     {
         [TestMethod]
         public void CallBrandsService() 

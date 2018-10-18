@@ -9,10 +9,10 @@ using System.Text;
 namespace ProductAPI.Tests
 {
     [TestClass]
-    public class ProductsServiceTests
+    public class ProductsRoutingTests
     {
         [TestMethod]
-        public void CallProductsService() //object data, string path
+        public void CallProductsService() 
         {
             string path = Configuration.Default.Resource
                 + "/api/products";

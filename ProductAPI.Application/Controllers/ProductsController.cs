@@ -104,7 +104,7 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-        // GET: api/Products/5
+        // GET: api/Products/Count/
         [HttpGet("count")]
         public IActionResult GetTotalProducts()
         {

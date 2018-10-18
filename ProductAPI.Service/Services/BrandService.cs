@@ -12,14 +12,19 @@ namespace ProductAPI.Service.Services
 {
     public class BrandService : IBrandService
     {
-        private BrandRepository brandRepository = new BrandRepository();
+        private readonly IBrandRepository _brandRepository;
+
+        public BrandService(IBrandRepository brandRepository)
+        {
+            _brandRepository = brandRepository;
+        }
 
         public void Delete(int id)
         {
             if (id == 0)
                 throw new ArgumentException("The id can't be zero.");
 
-            brandRepository.Delete(id);
+            _brandRepository.Delete(id);
         }
 
         public Brand Get(int id)
@@ -27,16 +32,16 @@ namespace ProductAPI.Service.Services
             if (id == 0)
                 throw new ArgumentException("The id can't be zero.");
 
-            return brandRepository.Select(id);
+            return _brandRepository.Select(id);
         }
 
-        public IList<Brand> Get() => brandRepository.Select();
+        public IList<Brand> Get() => _brandRepository.Select();
 
         public Brand Post<V>(Brand obj) where V : AbstractValidator<Brand>
         {
             Validate(obj, Activator.CreateInstance<V>());
 
-            brandRepository.Insert(obj);
+            _brandRepository.Insert(obj);
             return obj;
         }
 
@@ -44,11 +49,11 @@ namespace ProductAPI.Service.Services
         {
             Validate(obj, Activator.CreateInstance<V>());
 
-            brandRepository.Update(obj);
+            _brandRepository.Update(obj);
             return obj;
         }
 
-        public List<BrandProduct> GetBrandsAndTotalProducts() => brandRepository.SelectBrands();
+        public List<BrandProduct> GetBrandsAndTotalProducts() => _brandRepository.SelectBrands();
 
         private void Validate(Brand obj, AbstractValidator<Brand> validator)
         {

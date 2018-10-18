@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
 using ProductAPI.Domain.Interfaces;
+using ProductAPI.Infra.Data.Repository;
 using ProductAPI.Service.Services;
 
 namespace ProductAPI.Application
@@ -29,7 +30,6 @@ namespace ProductAPI.Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvcCore().AddJsonFormatters();
 
@@ -44,6 +44,10 @@ namespace ProductAPI.Application
 
             services.AddSingleton<IProductService, ProductService>();
             services.AddSingleton<IBrandService, BrandService>();
+
+            services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<IBrandRepository, BrandRepository>();
+
             services.AddTransient<ProductService, ProductService>();
             services.AddTransient<BrandService, BrandService>();
         }
