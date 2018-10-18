@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductAPI.Domain\ProductAPI.Domain.csproj" />
+    <ProjectReference Include="..\ProductAPI.Infra.Data\ProductAPI.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
