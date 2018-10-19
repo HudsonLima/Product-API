@@ -30,7 +30,7 @@ namespace ProductAPI.Infra.Data.Repository
             return context.Set<Brand>().Find(id);
         }
 
-        public IList<Brand> Select()
+        public IList<Brand> SelectBrands()
         {
             return context.Set<Brand>().ToList();
         }
@@ -41,7 +41,7 @@ namespace ProductAPI.Infra.Data.Repository
             context.SaveChanges();
         }
 
-        public List<BrandProduct> SelectBrands()
+        public List<BrandProduct> SelectBrandsWithTotalProducts()
         {
             return (from b in context.Set<Brand>()
                     select new BrandProduct

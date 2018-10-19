@@ -35,7 +35,7 @@ namespace ProductAPI.Infra.Data.Repository
             return from p in context.Set<Product>()
                    join b in context.Set<Brand>() on p.Brand_Id equals b.Id
                    where p.Active == true
-                   select new
+                   select new 
                    {
                        id = p.Id,
                        name = p.Name,
@@ -54,7 +54,7 @@ namespace ProductAPI.Infra.Data.Repository
             context.SaveChanges();
         }
 
-        public int countActiveProducts()
+        public int CountActiveProducts()
         {
             return context.Product.Count(p => p.Active == true);
         }

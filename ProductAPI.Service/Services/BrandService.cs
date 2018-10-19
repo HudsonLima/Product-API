@@ -35,7 +35,7 @@ namespace ProductAPI.Service.Services
             return _brandRepository.Select(id);
         }
 
-        public IList<Brand> Get() => _brandRepository.Select();
+        public IList<Brand> Get() => _brandRepository.SelectBrands();
 
         public Brand Post<V>(Brand obj) where V : AbstractValidator<Brand>
         {
@@ -53,7 +53,7 @@ namespace ProductAPI.Service.Services
             return obj;
         }
 
-        public List<BrandProduct> GetBrandsAndTotalProducts() => _brandRepository.SelectBrands();
+        public List<BrandProduct> GetBrandsAndTotalProducts() => _brandRepository.SelectBrandsWithTotalProducts();
 
         private void Validate(Brand obj, AbstractValidator<Brand> validator)
         {

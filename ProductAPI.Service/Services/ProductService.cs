@@ -54,7 +54,7 @@ namespace ProductAPI.Service.Services
 
         public int Count()
         {
-            return _productRepository.countActiveProducts();
+            return _productRepository.CountActiveProducts();
         }
 
         private void Validate(Product obj, AbstractValidator<Product> validator)
