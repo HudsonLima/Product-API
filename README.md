@@ -22,7 +22,7 @@ See the Brands examples here:
 
 ``` https://localhost:5001/api/brands/1 ```
 
-![Product-API](./.screenshots/getSingle.PNG)
+![Product-API](./screenshots/getSingle.PNG)
 
 ## GET Count Brands
 
