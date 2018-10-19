@@ -22,7 +22,7 @@ See the Brands examples here:
 
 ![Product-API](./screenshots/get.PNG)
 
-## GET single Brands
+## GET single Brand
 
 ``` https://localhost:5001/api/brands/1 ```
 
@@ -34,7 +34,7 @@ See the Brands examples here:
 
 ![Product-API](./screenshots/getCount.PNG)
 
-## POST a Brands
+## POST a Brand
 
 ``` http://localhost:5001/api/brands/ ```
 
