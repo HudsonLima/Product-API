@@ -4,9 +4,13 @@ Product API
 ## Description
 A ASP.NET Core 2.1 Web Api project with DDD. The Product API supports the management of products and it`s brands
 
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
+
 See the Brands examples here: 
 
-## Versions
+## URL
 
 ``` https://localhost:5001/ ```
 
