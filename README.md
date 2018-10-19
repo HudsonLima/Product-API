@@ -10,13 +10,13 @@ See the Brands examples here:
 
 ``` https://localhost:5001/ ```
 
-![Product-API](./.screenshots/url.png)
+![Product-API](./screenshots/url.png)
 
 ## GET all Brands
 
 ``` https://localhost:5001/api/brands/ ```
 
-![Product-API](./.screenshots/get.png)
+![Product-API](./screenshots/get.png)
 
 ## GET single Brands
 
@@ -28,7 +28,7 @@ See the Brands examples here:
 
 ``` https://localhost:5001/api/brands/count ```
 
-![Product-API](./.screenshots/getCount.png)
+![Product-API](./screenshots/getCount.png)
 
 ## POST a Brands
 
@@ -40,7 +40,7 @@ See the Brands examples here:
   }
 ```
 
-![Product-API](./.screenshots/post.jpg)
+![Product-API](./screenshots/post.jpg)
 
 ## PUT a Brand
 
@@ -53,11 +53,11 @@ See the Brands examples here:
 }
 ```
 
-![Product-API](./.github/put.jpg)
+![Product-API](./screenshots/put.jpg)
 
 
 ## DELETE a Brand
 
 ``` http://localhost:5001/api/brands/1 ```
 
-![Product-API](./.github/delete.jpg)
+![Product-API](./screenshots/delete.jpg)
