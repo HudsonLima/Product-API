@@ -40,7 +40,7 @@ See the Brands examples here:
 
 ```javascript
   {
-      "name": "NewBrand",
+      "name": "NewBrand"
   }
 ```
 
