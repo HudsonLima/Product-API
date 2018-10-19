@@ -10,25 +10,25 @@ See the Brands examples here:
 
 ``` https://localhost:5001/ ```
 
-![ASPNETCOREWebAPIVersions](./.github/versions.jpg)
+![Product-API](./.screenshots/url.png)
 
 ## GET all Brands
 
-``` https://localhost:5001/api/brands ```
+``` https://localhost:5001/api/brands/ ```
 
-![ASPNETCOREWebAPIGET](./.github/get.jpg)
+![Product-API](./.screenshots/get.png)
 
 ## GET single Brands
 
 ``` https://localhost:5001/api/brands/1 ```
 
-![ASPNETCOREWebAPIGET](./.github/getSingle.jpg)
+![Product-API](./.screenshots/getSingle.png)
 
-## GET single Brands
+## GET Count Brands
 
 ``` https://localhost:5001/api/brands/count ```
 
-![ASPNETCOREWebAPIGET](./.github/getCount.jpg)
+![Product-API](./.screenshots/getCount.png)
 
 ## POST a Brands
 
@@ -40,7 +40,7 @@ See the Brands examples here:
   }
 ```
 
-![ASPNETCOREWebAPIGET](./.github/post.jpg)
+![Product-API](./.screenshots/post.jpg)
 
 ## PUT a Brand
 
@@ -53,11 +53,11 @@ See the Brands examples here:
 }
 ```
 
-![ASPNETCOREWebAPIGET](./.github/put.jpg)
+![Product-API](./.github/put.jpg)
 
 
 ## DELETE a Brand
 
 ``` http://localhost:5001/api/brands/1 ```
 
-![ASPNETCOREWebAPIGET](./.github/delete.jpg)
+![Product-API](./.github/delete.jpg)
