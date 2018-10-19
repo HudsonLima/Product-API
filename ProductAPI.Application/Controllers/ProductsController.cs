@@ -18,7 +18,7 @@ namespace ProductAPI.Application.Controllers
         {
             _productService = productService;
         }
-        
+
         // GET: api/Products
         [HttpGet]
         public IActionResult Get()

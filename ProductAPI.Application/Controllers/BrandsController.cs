@@ -117,7 +117,8 @@ namespace ProductAPI.Application.Controllers
         }
 
         // Get: api/Brands/Count
-        [HttpGet("count"), Produces("application/xml")]
+        [Produces("application/xml")]
+        [HttpGet("count")]
         public IActionResult GetBrandsAndTotalProducts()
         {
             try
