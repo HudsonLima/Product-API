@@ -36,20 +36,20 @@ namespace ProductAPI.Service.Services
 
         public IQueryable<Object> Get() => _productRepository.SelectProducts();
 
-        public Product Post<V>(Product obj) where V : AbstractValidator<Product>
+        public Product Post<V>(Product product) where V : AbstractValidator<Product>
         {
-            Validate(obj, Activator.CreateInstance<V>());
+            Validate(product, Activator.CreateInstance<V>());
 
-            _productRepository.Insert(obj);
-            return obj;
+            _productRepository.Insert(product);
+            return product;
         }
 
-        public Product Put<V>(Product obj) where V : AbstractValidator<Product>
+        public Product Put<V>(Product product) where V : AbstractValidator<Product>
         {
-            Validate(obj, Activator.CreateInstance<V>());
+            Validate(product, Activator.CreateInstance<V>());
 
-            _productRepository.Update(obj);
-            return obj;
+            _productRepository.Update(product);
+            return product;
         }
 
         public int Count()

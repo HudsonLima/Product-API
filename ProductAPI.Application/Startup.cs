@@ -42,14 +42,15 @@ namespace ProductAPI.Application
 
             services.AddMvcCore().AddXmlSerializerFormatters();
 
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IBrandService, BrandService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IBrandService, BrandService>();
 
-            services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<IBrandRepository, BrandRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
 
             services.AddTransient<ProductService, ProductService>();
             services.AddTransient<BrandService, BrandService>();
+            services.AddTransient<ProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

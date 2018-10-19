@@ -13,9 +13,9 @@ namespace ProductAPI.Infra.Data.Repository
     {
         private SqlServerContext context = new SqlServerContext();
 
-        public void Insert(Brand obj)
+        public void Insert(Brand brand)
         {
-            context.Set<Brand>().Add(obj);
+            context.Set<Brand>().Add(brand);
             context.SaveChanges();
         }
 

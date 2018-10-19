@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Domain", "Produc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.Infra.Data", "ProductAPI.Infra.Data\ProductAPI.Infra.Data.csproj", "{02754441-2619-47EF-A82B-383963A9201A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{FFD22B2F-6D5C-4785-B044-4FC10DA7BFD5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

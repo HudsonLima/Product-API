@@ -6,6 +6,7 @@ using ProductAPI.Domain.Interfaces;
 using ProductAPI.Infra.Data.Context;
 using System.Linq;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProductAPI.Infra.Data.Repository
 {
@@ -13,9 +14,9 @@ namespace ProductAPI.Infra.Data.Repository
     {
         private SqlServerContext context = new SqlServerContext();
 
-        public void Insert(Product obj)
+        public void Insert(Product product)
         {
-            context.Set<Product>().Add(obj);
+            context.Set<Product>().Add(product);
             context.SaveChanges();
         }
 
@@ -48,9 +49,9 @@ namespace ProductAPI.Infra.Data.Repository
                    };
         }
 
-        public void Update(Product obj)
+        public void Update(Product product)
         {
-            context.Entry(obj).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.Entry(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             context.SaveChanges();
         }
 
