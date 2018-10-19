@@ -4,7 +4,7 @@ Product API
 ## Description
 A ASP.NET Core 2.1 Web Api project with DDD. The Product API supports the management of products and it`s brands
 
-See the examples here: 
+See the Brands examples here: 
 
 ## Versions
 
