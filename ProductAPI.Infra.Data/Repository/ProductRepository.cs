@@ -6,6 +6,7 @@ using ProductAPI.Domain.Interfaces;
 using ProductAPI.Infra.Data.Context;
 using System.Linq;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProductAPI.Infra.Data.Repository
 {
@@ -13,9 +14,9 @@ namespace ProductAPI.Infra.Data.Repository
     {
         private SqlServerContext context = new SqlServerContext();
 
-        public void Insert(Product obj)
+        public void Insert(Product product)
         {
-            context.Set<Product>().Add(obj);
+            context.Set<Product>().Add(product);
             context.SaveChanges();
         }
 
@@ -35,7 +36,7 @@ namespace ProductAPI.Infra.Data.Repository
             return from p in context.Set<Product>()
                    join b in context.Set<Brand>() on p.Brand_Id equals b.Id
                    where p.Active == true
-                   select new
+                   select new 
                    {
                        id = p.Id,
                        name = p.Name,
@@ -48,13 +49,13 @@ namespace ProductAPI.Infra.Data.Repository
                    };
         }
 
-        public void Update(Product obj)
+        public void Update(Product product)
         {
-            context.Entry(obj).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.Entry(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             context.SaveChanges();
         }
 
-        public int countActiveProducts()
+        public int CountActiveProducts()
         {
             return context.Product.Count(p => p.Active == true);
         }

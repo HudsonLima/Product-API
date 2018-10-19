@@ -18,7 +18,7 @@ namespace ProductAPI.Application.Controllers
         {
             _productService = productService;
         }
-        
+
         // GET: api/Products
         [HttpGet]
         public IActionResult Get()
@@ -41,7 +41,7 @@ namespace ProductAPI.Application.Controllers
             Product product = _productService.Get(id);
             if (product == null)
             {
-                return NotFound();
+                return NotFound("Product does not exist");
             }
             return Ok(product);
         }
@@ -57,7 +57,7 @@ namespace ProductAPI.Application.Controllers
             }
             catch (ArgumentNullException ex)
             {
-                return NotFound(ex);
+                return NotFound("Product does not exist");
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace ProductAPI.Application.Controllers
         }
 
         // POST: api/Products
-        // [HttpPost]
+        [HttpPost]
         public IActionResult Post([FromBody] Product product)
         {
             try
@@ -94,9 +94,9 @@ namespace ProductAPI.Application.Controllers
                 _productService.Delete(id);
                 return Ok();
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
-                return NotFound(ex);
+                return NotFound("Product does not exist");
             }
             catch (Exception ex)
             {
@@ -104,7 +104,7 @@ namespace ProductAPI.Application.Controllers
             }
         }
 
-        // GET: api/Products/5
+        // GET: api/Products/Count/
         [HttpGet("count")]
         public IActionResult GetTotalProducts()
         {

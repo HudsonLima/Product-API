@@ -54,7 +54,7 @@ namespace ProductAPI.Application.Controllers
             Brand brand = _brandService.Get(id);
             if (brand == null)
             {
-                return NotFound();
+                return NotFound("Brand does not exist");
             }
             return Ok(brand);
         }
@@ -68,9 +68,9 @@ namespace ProductAPI.Application.Controllers
                 _brandService.Put<BrandValidator>(brand);
                 return Ok(brand);
             }
-            catch (ArgumentNullException ex)
+            catch (ArgumentNullException)
             {
-                return NotFound(ex);
+                return NotFound("Brand does not exist");
             }
             catch (Exception ex)
             {
@@ -106,9 +106,9 @@ namespace ProductAPI.Application.Controllers
                 _brandService.Delete(id);
                 return Ok();
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
-                return NotFound(ex);
+                return NotFound("Brand does not exist");
             }
             catch (Exception ex)
             {
@@ -117,17 +117,18 @@ namespace ProductAPI.Application.Controllers
         }
 
         // Get: api/Brands/Count
-        [HttpGet("count"), Produces("application/xml")]
+        [Produces("application/xml")]
+        [HttpGet("count")]
         public IActionResult GetBrandsAndTotalProducts()
         {
             try
             {
-                List<BrandProduct> brands = _brandService.GetBrandsAndTotalProducts();
+                List<BrandElement> brands = _brandService.GetBrandsAndTotalProducts();
                 return Ok(brands);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
-                return NotFound(ex);
+                return NotFound("No brands in database");
             }
             catch (Exception ex)
             {

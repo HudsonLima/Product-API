@@ -19,6 +19,6 @@ namespace ProductAPI.Domain.Interfaces
 
         IList<Brand> Get();
 
-        List<BrandProduct> GetBrandsAndTotalProducts();
+        List<BrandElement> GetBrandsAndTotalProducts();
     }
 }

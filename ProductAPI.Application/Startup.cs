@@ -13,7 +13,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
 using ProductAPI.Domain.Interfaces;
+using ProductAPI.Infra.Data.Repository;
 using ProductAPI.Service.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace ProductAPI.Application
 {
@@ -29,38 +31,60 @@ namespace ProductAPI.Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvcCore().AddJsonFormatters();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "Product Api",
+                    Description = "A ASP.NET Core 2.1 Web Api project with DDD",
+                    TermsOfService = "None",
+                    Contact = new Contact
+                    {
+                        Name = "Hudson Lima",
+                        Email = "hudsonlima.ti@gmail.com",
+                        Url = "https://github.com/hudsonlima"
+                    }
+                });
+            });
 
-            services.AddMvcCore(options =>
+            services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
                 options.ReturnHttpNotAcceptable = true;
                 options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
             });
 
-            services.AddMvcCore().AddXmlSerializerFormatters();
+            services.AddMvc().AddXmlSerializerFormatters();
 
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IBrandService, BrandService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IBrandService, BrandService>();
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
+
             services.AddTransient<ProductService, ProductService>();
             services.AddTransient<BrandService, BrandService>();
+            services.AddTransient<ProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseHsts();
-            }
+         
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
 
-            app.UseHttpsRedirection();
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
+            });
+
             app.UseMvc();
         }
     }

@@ -11,14 +11,19 @@ namespace ProductAPI.Service.Services
 {
     public class ProductService : IProductService
     {
-        private ProductRepository productRepository = new ProductRepository();
+        private readonly IProductRepository _productRepository;
+
+        public ProductService(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
 
         public void Delete(int id)
         {
             if (id == 0)
                 throw new ArgumentException("The id can't be zero.");
 
-            productRepository.Delete(id);
+            _productRepository.Delete(id);
         }
 
         public Product Get(int id)
@@ -26,30 +31,30 @@ namespace ProductAPI.Service.Services
             if (id == 0)
                 throw new ArgumentException("The id can't be zero.");
 
-            return productRepository.Select(id);
+            return _productRepository.Select(id);
         }
 
-        public IQueryable<Object> Get() => productRepository.SelectProducts();
+        public IQueryable<Object> Get() => _productRepository.SelectProducts();
 
-        public Product Post<V>(Product obj) where V : AbstractValidator<Product>
+        public Product Post<V>(Product product) where V : AbstractValidator<Product>
         {
-            Validate(obj, Activator.CreateInstance<V>());
+            Validate(product, Activator.CreateInstance<V>());
 
-            productRepository.Insert(obj);
-            return obj;
+            _productRepository.Insert(product);
+            return product;
         }
 
-        public Product Put<V>(Product obj) where V : AbstractValidator<Product>
+        public Product Put<V>(Product product) where V : AbstractValidator<Product>
         {
-            Validate(obj, Activator.CreateInstance<V>());
+            Validate(product, Activator.CreateInstance<V>());
 
-            productRepository.Update(obj);
-            return obj;
+            _productRepository.Update(product);
+            return product;
         }
 
         public int Count()
         {
-            return productRepository.countActiveProducts();
+            return _productRepository.CountActiveProducts();
         }
 
         private void Validate(Product obj, AbstractValidator<Product> validator)

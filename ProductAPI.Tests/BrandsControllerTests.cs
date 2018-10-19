@@ -5,18 +5,19 @@ using ProductAPI.Application.Controllers;
 using ProductAPI.Domain.Entities;
 using ProductAPI.Domain.Interfaces;
 using ProductAPI.Service.Validators;
-using System.Collections.Generic;
+using ProductAPI.Tests.EntityBuilder;
 
 namespace ProductAPI.Tests
 {
     [TestClass]
     public class BrandsControllerTests
     {
+        
         [TestMethod]
         public void GetAllBrands_ShouldReturnAllBrands()
         {
             //Arrange
-            var testBrands = GetTestBrands();
+            var testBrands = BrandBuilderBuilder.GetTestBrands();
             var mock = new Mock<IBrandService>();
 
             //Act
@@ -30,7 +31,7 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void GetAllBrandsAndTotalProducts_ShouldReturnAllBrands()
+        public void Get_ShouldReturnAllBrandsAndTotalProducts()
         {
             //Arrange
             var mock = new Mock<IBrandService>();
@@ -46,11 +47,11 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void GetBrand_ShouldReturnCorrectBrand()
+        public void Get_ShouldReturnCorrectBrand()
         {
             //Arrange
             Brand testBrand = new Brand();
-            testBrand = GetTestBrand();
+            testBrand = BrandBuilderBuilder.GetTestBrand();
             var mock = new Mock<IBrandService>();
             var controller = new BrandsController(mock.Object);
 
@@ -64,7 +65,7 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void DeleteBrand_ShouldReturnOk()
+        public void Delete_ShouldReturnOk()
         {
             //Arrange
             var mock = new Mock<IBrandService>();
@@ -80,17 +81,16 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void PutBrand_ShouldReturnOk()
+        public void Put_ShouldReturnOk()
         {
             //Arrange
-            Brand testBrand = new Brand();
-            testBrand = GetTestBrand();
+            var testBrand = BrandBuilderBuilder.GetTestBrand();
             var mock = new Mock<IBrandService>();
             var controller = new BrandsController(mock.Object);
 
             //Act
-            mock.Setup(p => p.Put<BrandValidator>(GetTestBrand())).Returns(testBrand);
-            var result = controller.Put(GetTestBrand()) as OkObjectResult;
+            mock.Setup(p => p.Put<BrandValidator>(testBrand)).Returns(testBrand);
+            var result = controller.Put(testBrand) as OkObjectResult;
 
             //Assert
             Assert.IsNotNull(result);
@@ -99,17 +99,16 @@ namespace ProductAPI.Tests
         }
 
         [TestMethod]
-        public void PostBrand_ShouldReturnId()
+        public void Post_ShouldReturnId()
         {
             //Arrange
-            Brand testBrand = new Brand();
-            testBrand = GetTestBrand();
+            var testBrand = BrandBuilderBuilder.GetTestBrand();
             var mock = new Mock<IBrandService>();
             var controller = new BrandsController(mock.Object);
 
             //Act
-            mock.Setup(p => p.Post<BrandValidator>(GetTestBrand())).Returns(testBrand);
-            var result = controller.Post(GetTestBrand()) as OkObjectResult;
+            mock.Setup(p => p.Post<BrandValidator>(testBrand)).Returns(testBrand);
+            var result = controller.Post(testBrand) as OkObjectResult;
 
             // Assert
             Assert.IsNotNull(result);
@@ -117,28 +116,6 @@ namespace ProductAPI.Tests
             Assert.IsInstanceOfType(result, typeof(OkObjectResult));
             Assert.AreEqual(1, result.Value);
         }
-
-                     
-        private System.Collections.Generic.List<Brand> GetTestBrands()
-        {
-            var testBrands = new List<Brand>();
-            testBrands.Add(new Brand { Id = 1, Name = "Brand1"});
-            testBrands.Add(new Brand { Id = 2, Name = "Brand2" });
-            testBrands.Add(new Brand { Id = 3, Name = "Brand3" });
-            testBrands.Add(new Brand { Id = 4, Name = "Brand4" });
-
-            return testBrands;
-        }
-
-        private Brand GetTestBrand()
-        {
-            Brand brand = new Brand
-            {
-                Id = 1,
-                Name = "Brand1"
-            };
-
-            return brand;
-        }
+        
     }
 }

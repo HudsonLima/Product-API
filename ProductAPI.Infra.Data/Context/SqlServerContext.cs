@@ -24,5 +24,6 @@ namespace ProductAPI.Infra.Data.Context
             modelBuilder.Entity<Product>(new ProductMap().Configure);
             modelBuilder.Entity<Brand>(new BrandMap().Configure);
         }
+
     }
 }
