@@ -18,6 +18,6 @@ namespace ProductAPI.Domain.Interfaces
 
         IList<Brand> SelectBrands();
 
-        List<BrandProduct> SelectBrandsWithTotalProducts();
+        List<BrandElement> SelectBrandsWithTotalProducts();
     }
 }

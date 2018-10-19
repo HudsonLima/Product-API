@@ -41,16 +41,15 @@ namespace ProductAPI.Infra.Data.Repository
             context.SaveChanges();
         }
 
-        public List<BrandProduct> SelectBrandsWithTotalProducts()
+        public List<BrandElement> SelectBrandsWithTotalProducts()
         {
             return (from b in context.Set<Brand>()
-                    select new BrandProduct
+                    select new BrandElement
                     {
                         Id = b.Id,
                         Name = b.Name,
                         TotalProducts = context.Product.Where(x => x.Brand_Id == b.Id).Count()
                     }).ToList() ; 
-
         }
     }
 }

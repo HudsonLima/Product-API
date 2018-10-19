@@ -53,7 +53,7 @@ namespace ProductAPI.Service.Services
             return obj;
         }
 
-        public List<BrandProduct> GetBrandsAndTotalProducts() => _brandRepository.SelectBrandsWithTotalProducts();
+        public List<BrandElement> GetBrandsAndTotalProducts() => _brandRepository.SelectBrandsWithTotalProducts();
 
         private void Validate(Brand obj, AbstractValidator<Brand> validator)
         {

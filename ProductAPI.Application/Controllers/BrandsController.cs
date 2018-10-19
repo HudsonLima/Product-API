@@ -122,7 +122,7 @@ namespace ProductAPI.Application.Controllers
         {
             try
             {
-                List<BrandProduct> brands = _brandService.GetBrandsAndTotalProducts();
+                List<BrandElement> brands = _brandService.GetBrandsAndTotalProducts();
                 return Ok(brands);
             }
             catch (ArgumentException)

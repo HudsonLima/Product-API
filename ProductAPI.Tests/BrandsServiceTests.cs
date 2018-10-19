@@ -107,17 +107,17 @@ namespace ProductAPI.Tests
         public void Get_ShouldReturnAllBrandsProducts()
         {
             //Arrange
-            var testBrandsProducts = BrandProductBuilder.GetTestBrandsProducts();
+            var testBrandElements = BrandProductBuilder.GetTestBrandElements();
             var mock = new Mock<IBrandRepository>();
             var service = new BrandService(mock.Object);
 
             //Act
-            mock.Setup(repo => repo.SelectBrandsWithTotalProducts()).Returns(testBrandsProducts);
+            mock.Setup(repo => repo.SelectBrandsWithTotalProducts()).Returns(testBrandElements);
             var result = service.GetBrandsAndTotalProducts();
 
             //Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(testBrandsProducts, result);
+            Assert.AreEqual(testBrandElements, result);
         }
     }
 }

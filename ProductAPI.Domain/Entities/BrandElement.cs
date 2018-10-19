@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProductAPI.Domain.Entities
 {
-    public class BrandProduct : Brand
+    public class BrandElement : Brand
     {
         public int TotalProducts { get; set; }
     }
