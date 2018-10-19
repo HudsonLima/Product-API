@@ -36,7 +36,7 @@ See the Brands examples here:
 
 ```javascript
   {
-      "name": "Brand",
+      "name": "NewBrand",
   }
 ```
 
@@ -48,8 +48,8 @@ See the Brands examples here:
 
 ``` javascript
 {
-    "name": "Brand",
-    "id" : 1
+    "name": "NewBrand1",
+    "id" : 7
 }
 ```
 
@@ -58,6 +58,6 @@ See the Brands examples here:
 
 ## DELETE a Brand
 
-``` http://localhost:5001/api/brands/1 ```
+``` http://localhost:5001/api/brands/7 ```
 
 ![Product-API](./screenshots/delete.PNG)
