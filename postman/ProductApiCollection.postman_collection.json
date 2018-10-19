@@ -1,0 +1,4007 @@
+{
+	"info": {
+		"_postman_id": "cad2d9f5-94f8-4eb1-a1bd-6318576ee27f",
+		"name": "ProductApiCollection",
+		"description": "Collection for requests in Product Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Get all active products\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"5"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"6"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"7"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"8"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"9"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 11",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"11"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"12"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 13",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"13"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 14",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/14",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"14"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 15",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"15"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 16",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"16"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 17",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"17"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 18",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/18",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"18"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 19",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/19",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"19"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id 20",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "819134e1-2b2e-45ca-afcb-d7416712f780",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/20",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"20"
+							]
+						},
+						"description": "Get product\n\nResponse-Type: Json\n\nExample\n\nitems\n[\n    {\n        \"id\": 6,\n        \"name\": \"SIENA\",\n        \"unit\": \"UN\",\n        \"quantity\": 10,\n        \"price\": 100,\n        \"active\": true,\n        \"brand_Id\": 1,\n        \"brand_name\": \"VW\"\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get all brands\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"3"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"4"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"5"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"6"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"7"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"8"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"9"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"10"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 11",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"11"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"12"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 13",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"13"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 14",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/14",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"14"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 15",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"15"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 16",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"16"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 17",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"17"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 18",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/18",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"18"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 19",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/19",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"19"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands by id 20",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/20",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"20"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/brands/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"brands",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producs Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1df040-b603-419e-84ef-30033aca0f7c",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/products/count",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"products",
+								"count"
+							]
+						},
+						"description": "Get brand by id\n"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "16886d8e-d910-4ae4-91f6-99306c471f4e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a5c8cea8-3e2c-4ebd-8428-40f5051268a7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
