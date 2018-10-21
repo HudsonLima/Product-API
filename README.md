@@ -28,7 +28,7 @@ See the Brands examples here:
 
 ![Product-API](./screenshots/getSingle.PNG)
 
-## GET Count Brands
+## GET all Brands with Total Products
 
 ``` https://localhost:5001/api/brands/count ```
 
