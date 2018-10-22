@@ -3,7 +3,7 @@ Product API
 
 ## Description
 A ASP.NET Core 2.1 Web API project with DDD. The Product API supports the management of products and it`s brands.
-The API Documentation was described using [Swagger](https://swagger.io/)
+The documentation was described using [Swagger](https://swagger.io/)
 
 
 
